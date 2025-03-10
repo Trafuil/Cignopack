@@ -1,13 +1,7 @@
 {
-  "version": "1.0.0",
-  "minecraft_version": "1.12.2",
+  "version": "2.3.1",
+  "minecraft_version": "1.20.1",
   "files": [
-    {
-      "path": "create_manifest.py",
-      "hash": "99224ceccef18a098005ef1748dba525",
-      "url": "https://github.com/Trafuil/Cignopack.git/create_manifest.py",
-      "action": "update"
-    },
     {
       "path": "options.txt",
       "hash": "5eb1e3c8a3adae517fb549389b002a6e",
@@ -27,14 +21,8 @@
       "action": "update"
     },
     {
-      "path": ".git/AUTO_MERGE",
-      "hash": "5cb4b9e30adca7339b6e56dd1ec9d708",
-      "url": "https://github.com/Trafuil/Cignopack.git/.git/AUTO_MERGE",
-      "action": "update"
-    },
-    {
       "path": ".git/COMMIT_EDITMSG",
-      "hash": "fd5e5f050a79b00d71ee684aa55ea057",
+      "hash": "e2fbfac3ca03114a5796f4e39c568644",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/COMMIT_EDITMSG",
       "action": "update"
     },
@@ -64,7 +52,7 @@
     },
     {
       "path": ".git/index",
-      "hash": "0f8e6c10a861a312fd1fdfa5453c088a",
+      "hash": "d4c555d653a9e30c67d9ab0f41d8c170",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/index",
       "action": "update"
     },
@@ -166,19 +154,19 @@
     },
     {
       "path": ".git/logs/HEAD",
-      "hash": "a9f2173875621be83f19305b07303036",
+      "hash": "3d8e8ce3699f1eea4273bf4c254957cc",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/logs/HEAD",
       "action": "update"
     },
     {
       "path": ".git/logs/refs/heads/master",
-      "hash": "7621a1de713445ddf04a413731ab4e56",
+      "hash": "9f9e5a9c2ec4c4de243c282482063111",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/logs/refs/heads/master",
       "action": "update"
     },
     {
       "path": ".git/logs/refs/remotes/origin/master",
-      "hash": "b518f67613e6f0ba3ee608c3aeb48444",
+      "hash": "43cbf0b992763f59874771df77f7e2d5",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/logs/refs/remotes/origin/master",
       "action": "update"
     },
@@ -1155,6 +1143,12 @@
       "action": "update"
     },
     {
+      "path": ".git/objects/41/e37ddc6e7810aab7796f41c60a0f880cfdc8b1",
+      "hash": "6186e558a5f246e1dc2bdfcf05c1d892",
+      "url": "https://github.com/Trafuil/Cignopack.git/.git/objects/41/e37ddc6e7810aab7796f41c60a0f880cfdc8b1",
+      "action": "update"
+    },
+    {
       "path": ".git/objects/42/66dd1880f1dde19b96569562ab25fee966fe6d",
       "hash": "c84abbdc2eb74a655424a817f89ca2ea",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/objects/42/66dd1880f1dde19b96569562ab25fee966fe6d",
@@ -1956,6 +1950,12 @@
       "path": ".git/objects/81/f9d85f4498142047aacdddef0f92861f95eb6d",
       "hash": "176887416ff4fd86669529b4e48c11e3",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/objects/81/f9d85f4498142047aacdddef0f92861f95eb6d",
+      "action": "update"
+    },
+    {
+      "path": ".git/objects/82/68abfb8d037cfeca3530ad00d0a33225291968",
+      "hash": "a05b13bacf9c7b0df2ccba385097413c",
+      "url": "https://github.com/Trafuil/Cignopack.git/.git/objects/82/68abfb8d037cfeca3530ad00d0a33225291968",
       "action": "update"
     },
     {
@@ -2811,6 +2811,12 @@
       "action": "update"
     },
     {
+      "path": ".git/objects/c1/89a5313d1a7beeb4d7c93ff663bca7f57f124e",
+      "hash": "7cdfbd399ca11e091864e45acc42363b",
+      "url": "https://github.com/Trafuil/Cignopack.git/.git/objects/c1/89a5313d1a7beeb4d7c93ff663bca7f57f124e",
+      "action": "update"
+    },
+    {
       "path": ".git/objects/c1/ae0e8a20142fb6be6dc9d9192e9a0e6397ce29",
       "hash": "7d15db24f7f4352ba6905cb2fda93955",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/objects/c1/ae0e8a20142fb6be6dc9d9192e9a0e6397ce29",
@@ -3192,6 +3198,12 @@
       "path": ".git/objects/e1/6bd0499df218b5c131f432bb5fb65d1a888240",
       "hash": "fc9699ede411fb89c14c3916c45a85a0",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/objects/e1/6bd0499df218b5c131f432bb5fb65d1a888240",
+      "action": "update"
+    },
+    {
+      "path": ".git/objects/e1/a492e5dbb99e02c8c89d577cbf652893a08f9d",
+      "hash": "9bb56f9df9a06a21d288542c4ddf1de2",
+      "url": "https://github.com/Trafuil/Cignopack.git/.git/objects/e1/a492e5dbb99e02c8c89d577cbf652893a08f9d",
       "action": "update"
     },
     {
@@ -3664,13 +3676,13 @@
     },
     {
       "path": ".git/refs/heads/master",
-      "hash": "b7b9a6d0ab1bd2431311f1ab1f936097",
+      "hash": "207a957da15f40d855a46778ed21ea19",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/refs/heads/master",
       "action": "update"
     },
     {
       "path": ".git/refs/remotes/origin/master",
-      "hash": "b7b9a6d0ab1bd2431311f1ab1f936097",
+      "hash": "207a957da15f40d855a46778ed21ea19",
       "url": "https://github.com/Trafuil/Cignopack.git/.git/refs/remotes/origin/master",
       "action": "update"
     },

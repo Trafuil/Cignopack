@@ -2,51 +2,49 @@ import os
 import hashlib
 import json
 
-# Funzione per calcolare l'hash SHA1 di un file
-def get_file_hash(file_path):
-    sha1 = hashlib.sha1()
-    with open(file_path, 'rb') as f:
-        while chunk := f.read(4096):
-            sha1.update(chunk)
-    return sha1.hexdigest()
+def calc_md5(filepath):
+    with open(filepath, 'rb') as f:
+        return hashlib.md5(f.read()).hexdigest()
 
-# Directory del repository
-repo_dir = 'C:\\Users\\lucaf\\Desktop\\Documenti\\Games\\Minecraft\\cignopack'
+def scan_directory(base_dir, repo_url):
+    files = []
+    for root, dirs, filenames in os.walk(base_dir):
+        for filename in filenames:
+            if filename == "manifest.json":
+                continue
+                
+            full_path = os.path.join(root, filename)
+            rel_path = os.path.relpath(full_path, base_dir)
+            rel_path = rel_path.replace("\\", "/")  # Normalizza path per Windows
+            
+            files.append({
+                "path": rel_path,
+                "hash": calc_md5(full_path),
+                "url": f"{repo_url}/{rel_path}",
+                "action": "update"
+            })
+    
+    return files
 
-# URL base per il repository su GitHub
-base_url = 'https://github.com/Trafuil/Cignopack.git'
+def create_manifest(base_dir, repo_url, minecraft_version, version):
+    files = scan_directory(base_dir, repo_url)
+    
+    manifest = {
+        "version": version,
+        "minecraft_version": minecraft_version,
+        "files": files
+    }
+    
+    with open(os.path.join(base_dir, "manifest.json"), 'w') as f:
+        json.dump(manifest, f, indent=2)
+    
+    print(f"Creato manifest.json con {len(files)} file")
 
-# Lista per raccogliere tutte le informazioni sui file
-file_info = []
-
-# Scorri tutti i file nella repository
-for root, dirs, files in os.walk(repo_dir):
-    for file in files:
-        file_path = os.path.join(root, file)
-        
-        # Calcola l'hash del file
-        file_hash = get_file_hash(file_path)
-        
-        # Crea l'oggetto del file per il manifest
-        relative_path = os.path.relpath(file_path, repo_dir)
-        file_url = base_url + relative_path.replace(os.sep, '/')
-        
-        file_info.append({
-            "path": relative_path,
-            "hash": file_hash,
-            "url": file_url,
-            "action": "update"
-        })
-
-# Crea il manifest
-manifest = {
-    "version": "1.0.0",
-    "minecraft_version": "1.12.2",
-    "files": file_info
-}
-
-# Scrivi il file manifest.json
-with open(os.path.join(repo_dir, 'manifest.json'), 'w') as f:
-    json.dump(manifest, f, indent=4)
-
-print("Manifest JSON creato con successo.")
+if __name__ == "__main__":
+    # Configurazione
+    base_dir = "C:\\Users\\lucaf\\Desktop\\Documenti\\Games\\Minecraft\\cignopack"  # Modifica con il percorso della tua modpack
+    repo_url = "https://github.com/Trafuil/Cignopack.git"  # Modifica con l'URL del tuo repository
+    minecraft_version = "1.12.2"  # Modifica con la versione di Minecraft
+    version = "1.0.0"  # Versione della modpack
+    
+    create_manifest(base_dir, repo_url, minecraft_version, version)
